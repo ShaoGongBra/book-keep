@@ -1,0 +1,20 @@
+.index-main {
+  flex: 1;
+  position: relative;
+  &__item {
+    position: absolute;
+    left: -9999px;
+    right: 9999px;
+    top: 0;
+    bottom: 0;
+    &--hover {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+::-webkit-scrollbar{   //隐藏右侧滚动条
+  width: 0;
+  height: 0;
+  color: transparent;
+}

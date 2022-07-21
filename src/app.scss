@@ -1,0 +1,26 @@
+/*  #ifndef rn h5  */
+page {
+  height: 100vh;
+}
+/*  #endif  */
+
+/*  #ifdef h5  */
+.taro_page {
+  height: 100vh;
+}
+/*  #endif  */
+
+/*  #ifdef h5  */
+taro-input-core {
+  position: relative;
+  input {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}
+/*  #endif  */
+
+.top-view {
+  background-color: #f5f5f5;
+}

@@ -1,0 +1,23 @@
+.action-sheet {
+  background-color: #fff;
+  height: 800px;
+  border-radius: 20px 20px 0 0;
+  &__title {
+    padding: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    border-bottom-width: 1px;
+    border-bottom-color: #e2e2e2;
+    font-weight: bold;
+  }
+  &__item {
+    padding: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    &__text {
+      font-size: 28px;
+      color: #333;
+    }
+  }
+}

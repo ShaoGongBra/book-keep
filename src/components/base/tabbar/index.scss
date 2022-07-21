@@ -1,0 +1,75 @@
+.tabbar-page {
+  flex: 1;
+  position: relative;
+  &--hidden {
+    position: absolute;
+    left: -9999px;
+    right: 9999px;
+    top: 0;
+    bottom: 0;
+  }
+  &__item {
+    position: absolute;
+    left: -9999px;
+    right: 9999px;
+    top: 0;
+    bottom: 0;
+    &--hover {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+.tabbar-menu {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-top-width: 1px;
+  border-top-color: #e2e2e2;
+  /*postcss-pxtransform rn eject enable*/
+  border-top-style: solid;
+  /*postcss-pxtransform rn eject disable*/
+  &__item {
+    flex: 1;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 0;
+    &__image {
+      width: 64px;
+      height: 64px;
+      &--max {
+        width: 96px;
+        height: 96px;
+      }
+    }
+    &__name {
+      // margin-top: 10px;
+      font-size: 22px;
+    }
+    &__point {
+      position: absolute;
+      top: 5px;
+      right: -40px;
+      background-color: red;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+    }
+    &__number {
+      position: absolute;
+      top: 5px;
+      right: -50px;
+      background-color: red;
+      min-width: 34px;
+      height: 34px;
+      border-radius: 17px;
+      align-items: center;
+      justify-content: center;
+      &__text {
+        color: #fff;
+        font-size: 24px;
+        padding: 0 8px;
+      }
+    }
+  }
+}

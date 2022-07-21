@@ -1,0 +1,17 @@
+diff --git a/node_modules/@tarojs/components-rn/dist/components/Text/index.js b/node_modules/@tarojs/components-rn/dist/components/Text/index.js
+index c84f53b..21dd23c 100644
+--- a/node_modules/@tarojs/components-rn/dist/components/Text/index.js
++++ b/node_modules/@tarojs/components-rn/dist/components/Text/index.js
+@@ -15,10 +15,10 @@ var __rest = (this && this.__rest) || function (s, e) {
+     return t;
+ };
+ import * as React from 'react';
+-import { Text } from 'react-native';
++import { Text, Platform } from 'react-native';
+ const _Text = (_a) => {
+     var { style, children, selectable, onClick } = _a, otherProps = __rest(_a, ["style", "children", "selectable", "onClick"]);
+-    return (React.createElement(Text, Object.assign({ selectable: !!selectable, style: style, onPress: onClick }, otherProps), children));
++    return (React.createElement(Text, Object.assign({ selectable: !!selectable, style: [Platform.OS === 'android' ? { fontFamily: '' } : {}, style], onPress: onClick }, otherProps), children));
+ };
+ _Text.displayName = '_Text';
+ export default _Text;

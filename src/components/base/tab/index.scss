@@ -1,0 +1,46 @@
+.tab {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 0;
+  &__item {
+    justify-content: center;
+    align-items: center;
+    &__text {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    &__line {
+      margin-top: 10px;
+      width:30px;
+      height:8px;
+    }
+  }
+}
+
+.tab__scroll {
+  flex-direction: row;
+  align-items: center;
+  padding-top: 30px;
+  &__item {
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 64px;
+    &__text {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    &__line {
+      margin-top: 22px;
+      width:30px;
+      height:8px;
+    }
+    &--first {
+      padding-left: 45px;
+    }
+    &--last {
+      padding-right: 45px;
+    }
+  }
+}

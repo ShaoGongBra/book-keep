@@ -1,0 +1,90 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.duxapp.bookkeep">
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <permission android:name="com.duxapp.bookkeep.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
+  <uses-permission android:name="com.duxapp.bookkeep.permission.MIPUSH_RECEIVE" />
+
+  <queries>
+    <intent>
+      <action android:name="android.intent.action.DIAL" />
+    </intent>
+    <package android:name="com.tencent.mm" />   // 指定微信包名
+    <package android:name="com.eg.android.AlipayGphone" />   // 指定支付宝包名
+  </queries>
+
+  <application
+    android:name=".MainApplication"
+    android:label="@string/app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:allowBackup="false"
+    android:theme="@style/BootTheme">
+    <activity
+      android:name=".MainActivity"
+      android:label="@string/app_name"
+      android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+      android:exported="true"
+      android:launchMode="singleTask"
+      android:screenOrientation="portrait"
+      android:windowSoftInputMode="adjustResize">
+      <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+          <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+      </intent-filter>
+    </activity>
+    <!-- react-native-wechat-lib start -->
+    <activity
+      android:name=".wxapi.WXEntryActivity"
+      android:label="@string/app_name"
+      android:exported="true"
+      android:taskAffinity="com.duxapp.bookkeep"
+      android:launchMode="singleTask"
+    />
+    <activity
+      android:name=".wxapi.WXPayEntryActivity"
+      android:label="@string/app_name"
+      android:exported="true"
+    />
+    <!-- react-native-wechat-lib end -->
+
+    <!-- react-native-dux-push start -->
+    <!-- 小米推送 -->
+    <meta-data
+      android:name="com.xm.push.appid"
+      android:value="\" />
+    <meta-data
+      android:name="com.xm.push.appkey"
+      android:value="\" />
+
+    <!-- 华为推送 -->
+    <meta-data
+      android:name="com.huawei.hms.client.appid"
+      android:value="" />
+
+    <!-- vivo推送 -->
+    <meta-data
+      android:name="com.vivo.push.app_id"
+      android:value="" />
+    <meta-data
+      android:name="com.vivo.push.api_key"
+      android:value="" />
+
+    <!-- oppo -->
+    <meta-data
+      android:name="com.oppo.push.app_key"
+      android:value=""/>
+    <meta-data
+      android:name="com.oppo.push.app_secret"
+      android:value=""/>
+    <!-- react-native-dux-push end -->
+  </application>
+</manifest>

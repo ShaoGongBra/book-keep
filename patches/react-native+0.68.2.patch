@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native/React/Views/RCTFont.mm b/node_modules/react-native/React/Views/RCTFont.mm
+index 549adca..286379b 100644
+--- a/node_modules/react-native/React/Views/RCTFont.mm
++++ b/node_modules/react-native/React/Views/RCTFont.mm
+@@ -301,7 +301,7 @@ RCT_ARRAY_CONVERTER(RCTFontVariantDescriptor)
+   // Get font attributes
+   fontSize = [RCTConvert CGFloat:size] ?: fontSize;
+   if (scaleMultiplier > 0.0 && scaleMultiplier != 1.0) {
+-    fontSize = round(fontSize * scaleMultiplier);
++    fontSize = round(fontSize);
+   }
+   familyName = [RCTConvert NSString:family] ?: familyName;
+   isItalic = style ? [RCTConvert RCTFontStyle:style] : isItalic;

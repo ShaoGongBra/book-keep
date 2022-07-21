@@ -1,0 +1,13 @@
+diff --git a/node_modules/@0x5e/react-native-alipay/android/build.gradle b/node_modules/@0x5e/react-native-alipay/android/build.gradle
+index 9a20c67..955c787 100644
+--- a/node_modules/@0x5e/react-native-alipay/android/build.gradle
++++ b/node_modules/@0x5e/react-native-alipay/android/build.gradle
+@@ -34,6 +34,6 @@ repositories {
+ }
+ 
+ dependencies {
+-    compile 'com.facebook.react:react-native:+'
+-    compile(name: 'alipaySdk-15.7.5-20200422171619', ext: 'aar')
++    implementation 'com.facebook.react:react-native:+'
++    compileOnly files('libs/alipaySdk-15.7.5-20200422171619.aar')
+ }

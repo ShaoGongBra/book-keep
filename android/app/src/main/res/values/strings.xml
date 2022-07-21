@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">记账本</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey"></string>
+</resources>
